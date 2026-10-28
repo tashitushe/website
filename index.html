@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Farnoud Najari — IT Support Specialist &amp; Web Developer, based in Stockholm, Sweden.">
+<title>Farnoud Najari — IT Support Specialist &amp; Web Developer</title>
+<link rel="canonical" href="https://farnoud.net/">
+<meta name="author" content="Farnoud Najari">
+<meta name="robots" content="index, follow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#eef1f8" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#080a12" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Farnoud Najari">
+<meta property="og:title" content="Farnoud Najari — IT Support Specialist &amp; Web Developer">
+<meta property="og:description" content="IT Support Specialist &amp; Web Developer, based in Stockholm, Sweden.">
+<meta property="og:url" content="https://farnoud.net/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%233450e6'/%3E%3Ctext x='32' y='44' font-family='Arial,sans-serif' font-size='34' font-weight='700' text-anchor='middle' fill='white'%3EF%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+  :root{
+    --bg:#eef1f8;
+    --bg-blob-a:#4f6bff;
+    --bg-blob-b:#17c3b2;
+    --bg-blob-c:#ff8a65;
+    --surface:rgba(255,255,255,0.50);
+    --surface-strong:rgba(255,255,255,0.68);
+    --surface-border:rgba(255,255,255,0.75);
+    --sheen:rgba(255,255,255,0.55);
+    --text:#12172b;
+    --text-muted:#525c74;
+    --text-faint:#7e88a3;
+    --accent:#3450e6;
+    --accent-soft:rgba(52,80,230,0.12);
+    --teal:#0e9488;
+    --coral:#e0653f;
+    --divider:rgba(18,23,43,0.10);
+    --ok-dot:#1fae7b;
+    --shadow-panel:0 1px 1px rgba(20,25,50,0.04),0 8px 30px -8px rgba(20,25,50,0.18),0 30px 60px -30px rgba(20,25,50,0.20);
+    --shadow-soft:0 1px 1px rgba(20,25,50,0.03),0 6px 18px -6px rgba(20,25,50,0.12);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#080a12;
+      --bg-blob-a:#4f5eff;
+      --bg-blob-b:#12b3a3;
+      --bg-blob-c:#ff7a4d;
+      --surface:rgba(255,255,255,0.055);
+      --surface-strong:rgba(255,255,255,0.085);
+      --surface-border:rgba(255,255,255,0.14);
+      --sheen:rgba(255,255,255,0.14);
+      --text:#eef1fb;
+      --text-muted:#a6acc4;
+      --text-faint:#767d99;
+      --accent:#8b9bff;
+      --accent-soft:rgba(139,155,255,0.16);
+      --teal:#3fd8c7;
+      --coral:#ff9169;
+      --divider:rgba(255,255,255,0.10);
+      --ok-dot:#3fe0a5;
+      --shadow-panel:0 1px 1px rgba(0,0,0,0.3),0 8px 30px -8px rgba(0,0,0,0.55),0 40px 80px -40px rgba(0,0,0,0.6);
+      --shadow-soft:0 1px 1px rgba(0,0,0,0.25),0 6px 18px -6px rgba(0,0,0,0.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#080a12;
+    --bg-blob-a:#4f5eff;
+    --bg-blob-b:#12b3a3;
+    --bg-blob-c:#ff7a4d;
+    --surface:rgba(255,255,255,0.055);
+    --surface-strong:rgba(255,255,255,0.085);
+    --surface-border:rgba(255,255,255,0.14);
+    --sheen:rgba(255,255,255,0.14);
+    --text:#eef1fb;
+    --text-muted:#a6acc4;
+    --text-faint:#767d99;
+    --accent:#8b9bff;
+    --accent-soft:rgba(139,155,255,0.16);
+    --teal:#3fd8c7;
+    --coral:#ff9169;
+    --divider:rgba(255,255,255,0.10);
+    --ok-dot:#3fe0a5;
+    --shadow-panel:0 1px 1px rgba(0,0,0,0.3),0 8px 30px -8px rgba(0,0,0,0.55),0 40px 80px -40px rgba(0,0,0,0.6);
+    --shadow-soft:0 1px 1px rgba(0,0,0,0.25),0 6px 18px -6px rgba(0,0,0,0.4);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Manrope',ui-sans-serif,system-ui,-apple-system,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    transition:background .4s ease,color .4s ease;
+  }
+  ::selection{background:var(--accent-soft);color:var(--text);}
+
+  h1,h2,h3{
+    font-family:'Bricolage Grotesque',ui-sans-serif,system-ui,sans-serif;
+    font-weight:700;
+    letter-spacing:-0.02em;
+    text-wrap:balance;
+    margin:0;
+    color:var(--text);
+  }
+  .mono{font-family:'JetBrains Mono',ui-monospace,SFMono-Regular,monospace;}
+  a{color:inherit;}
+  p{margin:0;}
+
+  /* ---------- ambient background ---------- */
+  .bg-scene{position:fixed;inset:0;z-index:-1;overflow:hidden;}
+  .blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.55;will-change:transform;}
+  .blob-a{width:46vw;height:46vw;left:-12vw;top:-14vw;background:radial-gradient(circle at 35% 35%,var(--bg-blob-a),transparent 70%);animation:float-a 26s ease-in-out infinite;}
+  .blob-b{width:38vw;height:38vw;right:-10vw;top:8vh;background:radial-gradient(circle at 60% 40%,var(--bg-blob-b),transparent 70%);animation:float-b 32s ease-in-out infinite;}
+  .blob-c{width:42vw;height:42vw;left:20vw;bottom:-18vw;background:radial-gradient(circle at 50% 50%,var(--bg-blob-c),transparent 72%);animation:float-c 30s ease-in-out infinite;opacity:.35;}
+  .grain{position:absolute;inset:0;opacity:.03;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");}
+  @keyframes float-a{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(4vw,6vh) scale(1.08);}}
+  @keyframes float-b{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(-5vw,4vh) scale(0.95);}}
+  @keyframes float-c{0%,100%{transform:translate(0,0) scale(1);}50%{transform:translate(3vw,-5vh) scale(1.06);}}
+  @media (prefers-reduced-motion:reduce){
+    .blob{animation:none !important;}
+    html{scroll-behavior:auto;}
+  }
+
+  svg.filters{position:absolute;width:0;height:0;}
+
+  /* ---------- glass base ---------- */
+  .glass{
+    background:var(--surface);
+    border:1px solid var(--surface-border);
+    border-radius:28px;
+    backdrop-filter:blur(22px) saturate(160%);
+    -webkit-backdrop-filter:blur(22px) saturate(160%);
+    box-shadow:var(--shadow-panel);
+    position:relative;
+  }
+  .glass::before{
+    content:"";
+    position:absolute;inset:0;
+    border-radius:inherit;
+    padding:1px;
+    background:linear-gradient(135deg,var(--sheen),transparent 30%,transparent 70%,var(--sheen) 130%);
+    -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+    -webkit-mask-composite:xor;
+    mask-composite:exclude;
+    opacity:.6;
+    pointer-events:none;
+  }
+
+  .wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+  section{padding:120px 0;}
+  @media (max-width:720px){section{padding:80px 0;}}
+
+  /* ---------- nav ---------- */
+  .nav-holder{position:fixed;top:20px;left:0;right:0;z-index:50;display:flex;justify-content:center;padding:0 20px;}
+  nav.glass{
+    display:flex;align-items:center;gap:6px;
+    padding:8px 8px 8px 20px;
+    border-radius:999px;
+    width:min(920px,100%);
+  }
+  .brand{font-family:'Bricolage Grotesque';font-weight:700;font-size:1.05rem;margin-right:auto;display:flex;align-items:center;gap:8px;letter-spacing:-0.01em;}
+  .brand .dot{width:8px;height:8px;border-radius:50%;background:var(--ok-dot);box-shadow:0 0 0 3px var(--accent-soft);}
+  .nav-links{display:flex;gap:2px;}
+  .nav-links a{
+    padding:9px 14px;border-radius:999px;font-size:0.88rem;font-weight:600;color:var(--text-muted);
+    text-decoration:none;transition:background .2s ease,color .2s ease;
+  }
+  .nav-links a:hover{background:var(--surface-strong);color:var(--text);}
+  .theme-btn{
+    width:38px;height:38px;border-radius:50%;border:1px solid var(--surface-border);
+    background:var(--surface-strong);display:flex;align-items:center;justify-content:center;cursor:pointer;
+    color:var(--text);flex-shrink:0;
+  }
+  .theme-btn svg{width:17px;height:17px;}
+  .theme-btn .sun{display:none;}
+  :root[data-theme="dark"] .theme-btn .moon{display:none;}
+  :root[data-theme="dark"] .theme-btn .sun{display:block;}
+  @media (prefers-color-scheme:dark){
+    :root:not([data-theme="light"]) .theme-btn .moon{display:none;}
+    :root:not([data-theme="light"]) .theme-btn .sun{display:block;}
+  }
+
+  .menu-btn{
+    display:none;width:38px;height:38px;border-radius:50%;border:1px solid var(--surface-border);
+    background:var(--surface-strong);align-items:center;justify-content:center;cursor:pointer;
+    color:var(--text);flex-shrink:0;margin-right:6px;
+  }
+  .menu-btn svg{width:18px;height:18px;}
+  .menu-btn .icon-close{display:none;}
+  .menu-btn[aria-expanded="true"] .icon-menu{display:none;}
+  .menu-btn[aria-expanded="true"] .icon-close{display:block;}
+
+  .mobile-menu{
+    position:fixed;top:78px;left:20px;right:20px;z-index:49;
+    display:none;flex-direction:column;padding:10px;gap:2px;border-radius:22px;
+  }
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{
+    padding:13px 16px;border-radius:14px;font-size:0.95rem;font-weight:600;color:var(--text-muted);
+    text-decoration:none;transition:background .2s ease,color .2s ease;
+  }
+  .mobile-menu a:hover,.mobile-menu a:active{background:var(--surface-strong);color:var(--text);}
+
+  @media (max-width:720px){
+    .nav-links{display:none;}
+    .menu-btn{display:flex;}
+  }
+  @media (min-width:721px){.mobile-menu{display:none !important;}}
+
+  /* ---------- hero ---------- */
+  .hero{padding:168px 0 100px;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:48px;align-items:start;}
+  @media (max-width:900px){.hero-grid{grid-template-columns:1fr;}}
+  .eyebrow{
+    font-size:0.78rem;font-weight:600;color:var(--accent);letter-spacing:.08em;text-transform:uppercase;
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:18px;
+  }
+  .eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);}
+  h1.name{font-size:clamp(2.6rem,6vw,4.6rem);line-height:0.98;}
+  .role{font-family:'Bricolage Grotesque';font-weight:600;font-size:clamp(1.1rem,2vw,1.4rem);color:var(--text-muted);margin-top:14px;}
+  .lede{margin-top:22px;font-size:1.05rem;line-height:1.65;color:var(--text-muted);max-width:52ch;}
+  .cta-row{display:flex;gap:12px;margin-top:34px;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;padding:13px 22px;border-radius:999px;
+    font-weight:700;font-size:0.92rem;text-decoration:none;cursor:pointer;border:1px solid transparent;
+    transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 24px -8px var(--accent-soft),0 2px 8px -2px rgba(0,0,0,.2);}
+  .btn-primary:hover{box-shadow:0 16px 30px -8px var(--accent-soft);}
+  .btn-ghost{background:var(--surface-strong);border-color:var(--surface-border);color:var(--text);}
+  .btn-ghost:hover{background:var(--surface);}
+
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:52px;max-width:520px;}
+  .stat{padding:16px 6px;}
+  .stat b{display:block;font-family:'JetBrains Mono';font-size:1.5rem;font-weight:600;color:var(--text);}
+  .stat span{font-size:0.76rem;color:var(--text-faint);line-height:1.3;display:block;margin-top:4px;}
+  @media (max-width:480px){.stat-row{grid-template-columns:1fr 1fr 1fr;gap:8px;} .stat b{font-size:1.15rem;}}
+
+  /* status card */
+  .status-card{padding:26px;}
+  .status-head{display:flex;align-items:center;justify-content:space-between;padding-bottom:16px;border-bottom:1px solid var(--divider);}
+  .status-head .tabs span{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--divider);margin-right:5px;}
+  .status-title{font-family:'JetBrains Mono';font-size:0.78rem;color:var(--text-faint);letter-spacing:.04em;}
+  .status-line{display:flex;align-items:center;gap:10px;margin-top:18px;font-family:'JetBrains Mono';font-size:0.86rem;}
+  .status-line .ok{width:9px;height:9px;border-radius:50%;background:var(--ok-dot);box-shadow:0 0 0 4px rgba(31,174,123,0.18);flex-shrink:0;}
+  .status-line b{color:var(--text);font-weight:600;}
+  .status-desc{margin-top:8px;font-size:0.86rem;color:var(--text-muted);line-height:1.55;}
+  .status-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px;}
+  .status-tags span{
+    font-family:'JetBrains Mono';font-size:0.72rem;padding:5px 10px;border-radius:8px;
+    background:var(--surface-strong);border:1px solid var(--surface-border);color:var(--text-muted);
+  }
+  .status-contact{margin-top:22px;padding-top:18px;border-top:1px solid var(--divider);display:flex;flex-direction:column;gap:10px;}
+  .status-contact a{
+    display:flex;align-items:center;gap:10px;font-size:0.86rem;text-decoration:none;color:var(--text-muted);
+    font-family:'JetBrains Mono';transition:color .2s ease;
+  }
+  .status-contact a:hover{color:var(--accent);}
+  .status-contact svg{width:15px;height:15px;flex-shrink:0;color:var(--text-faint);}
+
+  /* ---------- section heads ---------- */
+  .sec-head{margin-bottom:48px;max-width:60ch;}
+  .sec-tag{font-family:'JetBrains Mono';font-size:0.78rem;color:var(--accent);letter-spacing:.06em;text-transform:uppercase;display:block;margin-bottom:12px;}
+  .sec-head h2{font-size:clamp(1.7rem,3.4vw,2.4rem);}
+  .sec-head p{margin-top:14px;color:var(--text-muted);font-size:1rem;line-height:1.6;}
+
+  /* ---------- about ---------- */
+  .about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;}
+  @media (max-width:860px){.about-grid{grid-template-columns:1fr;}}
+  .panel{padding:36px;}
+  .about-grid p.body-text{font-size:1.02rem;line-height:1.75;color:var(--text-muted);}
+  .lang-list{display:flex;flex-direction:column;gap:0;}
+  .lang-row{display:flex;align-items:center;justify-content:space-between;padding:14px 0;border-bottom:1px solid var(--divider);}
+  .lang-row:last-child{border-bottom:none;}
+  .lang-row b{font-weight:700;font-size:0.98rem;}
+  .lang-row span{font-family:'JetBrains Mono';font-size:0.76rem;color:var(--text-faint);padding:4px 10px;background:var(--surface-strong);border-radius:8px;border:1px solid var(--surface-border);}
+
+  /* ---------- experience ---------- */
+  .timeline{position:relative;display:flex;flex-direction:column;gap:22px;}
+  .tl-item{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:30px 34px;}
+  @media (max-width:720px){.tl-item{grid-template-columns:1fr;gap:10px;}}
+  .tl-date{font-family:'JetBrains Mono';font-size:0.78rem;color:var(--text-faint);line-height:1.5;padding-top:4px;}
+  .tl-body h3{font-size:1.15rem;}
+  .tl-role{color:var(--accent);font-weight:600;}
+  .tl-meta{font-size:0.85rem;color:var(--text-faint);margin-top:4px;font-family:'JetBrains Mono';}
+  .tl-list{margin:16px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:9px;}
+  .tl-list li{position:relative;padding-left:20px;font-size:0.95rem;color:var(--text-muted);line-height:1.55;}
+  .tl-list li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--teal);}
+
+  /* ---------- projects ---------- */
+  .proj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media (max-width:960px){.proj-grid{grid-template-columns:repeat(2,1fr);}}
+  @media (max-width:640px){.proj-grid{grid-template-columns:1fr;}}
+  .proj-card{padding:26px;display:flex;flex-direction:column;gap:12px;transition:transform .25s ease,box-shadow .25s ease;}
+  .proj-card:hover{transform:translateY(-4px);}
+  .proj-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;}
+  .proj-card h3{font-size:1.08rem;}
+  .proj-link{font-family:'JetBrains Mono';font-size:0.72rem;color:var(--teal);text-decoration:none;white-space:nowrap;padding:4px 9px;border:1px solid var(--surface-border);border-radius:8px;background:var(--surface-strong);}
+  .proj-card p{font-size:0.92rem;color:var(--text-muted);line-height:1.6;}
+  .proj-highlight{margin-top:auto;padding-top:12px;border-top:1px solid var(--divider);font-family:'JetBrains Mono';font-size:0.78rem;color:var(--coral);font-weight:600;}
+
+  /* ---------- skills ---------- */
+  .skill-groups{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+  @media (max-width:860px){.skill-groups{grid-template-columns:1fr;}}
+  .skill-card{padding:28px;}
+  .skill-card h3{font-size:0.95rem;font-family:'JetBrains Mono';color:var(--text-faint);text-transform:uppercase;letter-spacing:.05em;font-weight:600;margin-bottom:16px;}
+  .chip-set{display:flex;flex-wrap:wrap;gap:8px;}
+  .chip{font-size:0.85rem;font-weight:600;padding:7px 13px;border-radius:999px;background:var(--surface-strong);border:1px solid var(--surface-border);color:var(--text);}
+
+  /* ---------- education ---------- */
+  .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  @media (max-width:720px){.edu-grid{grid-template-columns:1fr;}}
+  .edu-card{padding:28px;display:flex;gap:18px;align-items:flex-start;}
+  .edu-icon{width:44px;height:44px;border-radius:12px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--accent);}
+  .edu-icon svg{width:22px;height:22px;}
+  .edu-card h3{font-size:1.02rem;}
+  .edu-card .edu-meta{font-family:'JetBrains Mono';font-size:0.78rem;color:var(--text-faint);margin-top:4px;}
+  .edu-card p{margin-top:10px;font-size:0.9rem;color:var(--text-muted);line-height:1.55;}
+
+  /* ---------- contact ---------- */
+  .contact-panel{padding:60px;text-align:center;display:flex;flex-direction:column;align-items:center;}
+  .contact-panel h2{font-size:clamp(1.9rem,4vw,2.8rem);max-width:16ch;}
+  .contact-panel p{margin-top:16px;color:var(--text-muted);font-size:1.02rem;max-width:48ch;line-height:1.6;}
+  .contact-links{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px;}
+  .contact-links a{
+    display:flex;align-items:center;gap:9px;padding:12px 20px;border-radius:999px;
+    background:var(--surface-strong);border:1px solid var(--surface-border);text-decoration:none;
+    font-size:0.9rem;font-weight:600;color:var(--text);transition:transform .2s ease,background .2s ease;
+  }
+  .contact-links a:hover{transform:translateY(-2px);background:var(--surface);}
+  .contact-links svg{width:16px;height:16px;color:var(--accent);}
+
+  footer{padding:40px 0 60px;text-align:center;}
+  footer p{font-size:0.82rem;color:var(--text-faint);}
+  footer .mono{color:var(--text-faint);}
+
+  ::-webkit-scrollbar{width:10px;}
+  ::-webkit-scrollbar-thumb{background:var(--surface-border);border-radius:99px;}
+</style>
+
+
+</head>
+<body>
+<svg class="filters"><defs>
+  <filter id="glass-distortion" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="14" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+</defs></svg>
+
+<div class="bg-scene">
+  <div class="blob blob-a"></div>
+  <div class="blob blob-b"></div>
+  <div class="blob blob-c"></div>
+  <div class="grain"></div>
+</div>
+
+<div class="nav-holder">
+  <nav class="glass">
+    <a class="brand" href="#top"><span class="dot"></span>Farnoud</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <button class="menu-btn" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu" type="button">
+      <svg class="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <button class="theme-btn" id="themeToggle" aria-label="Toggle light and dark theme" type="button">
+      <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"/></svg>
+      <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.4M12 19.1v2.4M4.4 4.4l1.7 1.7M17.9 17.9l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.4 19.6l1.7-1.7M17.9 6.1l1.7-1.7"/></svg>
+    </button>
+  </nav>
+  <div class="mobile-menu glass" id="mobileMenu">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">Stockholm, Sweden · Open to work</span>
+        <h1 class="name">Farnoud<br>Najari</h1>
+     <p class="role">IT Support Specialist &amp; Web Developer</p>
+<p class="lede">Eleven years of keeping systems, networks, and end-users running &mdash; across helpdesk environments and IT operations in Stockholm &mdash; with a parallel track building and maintaining WordPress sites for small businesses, and recently starting to explore mobile app design and development.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="mailto:job@farnoud.net">Email me</a>
+          <a class="btn btn-ghost" href="#experience">View experience</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><b>11+</b><span>Years in IT support &amp; systems</span></div>
+          <div class="stat"><b>05</b><span>Web projects delivered</span></div>
+          <div class="stat"><b>04</b><span>Languages spoken</span></div>
+        </div>
+      </div>
+
+      <div class="glass status-card">
+        <div class="status-head">
+          <span class="status-title">~/status</span>
+          <div class="tabs"><span></span><span></span><span></span></div>
+        </div>
+        <div class="status-line"><span class="ok"></span><b>Available</b>&nbsp;for freelance &amp; full‑time roles</div>
+        <p class="status-desc">Troubleshoots hardware, software and networks end‑to‑end. Comfortable across Windows, macOS and Linux, with working knowledge of web programming and basic network security.</p>
+        <div class="status-tags">
+          <span>Windows</span><span>macOS</span><span>Linux</span><span>Active Directory</span><span>PHP / MySQL</span><span>WordPress</span>
+        </div>
+        <div class="status-contact">
+          <a href="mailto:job@farnoud.net"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>job@farnoud.net</a>
+          <a href="https://linkedin.com/in/realfarnoud" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 0 1 5 0V17M12 10v7"/></svg>in/realfarnoud</a>
+          <a href="https://linktr.ee/farnoud" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>linktree</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">01 · About</span>
+        <h2>Support‑first, curious about the web.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="glass panel">
+          <p class="body-text">A skilled and experienced IT support and helpdesk professional with over eleven years providing technical assistance and customer service across diverse clients and users. Comfortable with programming and web development in HTML, CSS, JavaScript, PHP and MySQL, with foundational knowledge of network security. Confident diagnosing and resolving issues across software, hardware, networks and mobile devices on Windows, macOS and Linux.</p>
+        </div>
+        <div class="glass panel">
+          <div class="lang-list">
+            <div class="lang-row"><b>Persian</b><span>Native</span></div>
+            <div class="lang-row"><b>English</b><span>B1</span></div>
+            <div class="lang-row"><b>Swedish</b><span>SFI&nbsp;D</span></div>
+            <div class="lang-row"><b>Azeri</b><span>Basic</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">02 · Experience</span>
+        <h2>Three roles, one thread: keep people working.</h2>
+        <p>From wired networks and Active Directory in Tehran to cross‑functional IT projects in Stockholm.</p>
+      </div>
+      <div class="timeline">
+        <div class="glass tl-item">
+          <div class="tl-date">Jan 2022 &mdash;<br>Present</div>
+          <div class="tl-body">
+            <h3><span class="tl-role">IT Technician</span> · Ekzel AB</h3>
+            <div class="tl-meta">Stockholm, Sweden</div>
+            <ul class="tl-list">
+              <li>Provide technical support to end users by troubleshooting hardware and software issues.</li>
+              <li>Install operating systems, software applications and drivers on client machines.</li>
+              <li>Collaborate with cross‑functional teams to implement IT projects and system upgrades.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="glass tl-item">
+          <div class="tl-date">Aug 2015 &mdash;<br>Dec 2021</div>
+          <div class="tl-body">
+            <h3><span class="tl-role">IT Specialist</span> · KMTMED</h3>
+            <div class="tl-meta">Tehran, Iran</div>
+            <ul class="tl-list">
+              <li>Implemented and maintained software and hardware systems for efficient IT operations.</li>
+              <li>Resolved technical issues and provided technical support to end users.</li>
+              <li>Performed regular system updates and backups to protect data integrity and security.</li>
+              <li>Ran training sessions for staff on IT procedures and best practices.</li>
+              <li>Implemented and administered firewalls, and monitored networks for security and stability.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="glass tl-item">
+          <div class="tl-date">Jan 2013 &mdash;<br>Mar 2015</div>
+          <div class="tl-body">
+            <h3><span class="tl-role">IT Support</span> · AryaSamaneh</h3>
+            <div class="tl-meta">Tehran, Iran</div>
+            <ul class="tl-list">
+              <li>Provided technical support by assisting end users with hardware and software issues.</li>
+              <li>Troubleshot and resolved network connectivity issues for wired and wireless devices.</li>
+              <li>Installed, configured and maintained operating systems and applications on desktop computers.</li>
+              <li>Managed user accounts and access permissions within Active Directory.</li>
+              <li>Created and maintained documentation, troubleshooting guides and knowledge‑base articles.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">03 · Projects</span>
+        <h2>Web design work on the side.</h2>
+        <p>Independent and freelance builds &mdash; mostly WordPress, hand‑written HTML/CSS/JS, and a couple of full site launches from scratch &mdash; plus a few personal tools on GitHub.</p>
+      </div>
+      <div class="proj-grid">
+        <div class="glass proj-card">
+          <div class="proj-top"><h3>SibilApp</h3><a class="proj-link" href="https://github.com/tashitushe/SibilApp" target="_blank" rel="noopener">GitHub</a></div>
+          <p>A macOS utility that wraps any link into a standalone, double‑clickable native app &mdash; built in Swift with its own Liquid Glass interface.</p>
+          <div class="proj-highlight">Swift · macOS Liquid Glass UI</div>
+        </div>
+        <div class="glass proj-card">
+          <div class="proj-top"><h3>iran-adblock</h3><a class="proj-link" href="https://github.com/tashitushe/iran-adblock" target="_blank" rel="noopener">GitHub</a></div>
+          <p>An ad‑blocking filter list for Persian websites, maintained as a custom Brave filter source for iOS, Windows and macOS.</p>
+          <div class="proj-highlight">Community filter list · 1★</div>
+        </div>
+        <div class="glass proj-card">
+          <div class="proj-top"><h3>SibilNotch</h3><a class="proj-link" href="https://github.com/tashitushe/SibilNotchBox" target="_blank" rel="noopener">GitHub</a></div>
+          <p>A menu bar utility that turns the MacBook notch into an interactive dashboard for music, calendar, files, and battery status.</p>
+          <div class="proj-highlight">Swift · macOS Liquid Glass UI</div>
+        </div>
+        <div class="glass proj-card">
+          <div class="proj-top"><h3>Ekzel AB</h3><a class="proj-link" href="https://ekzel.se" target="_blank" rel="noopener">ekzel.se</a></div>
+          <p>Built responsive layouts with WordPress, HTML, CSS and JavaScript to match the client's minimalist design language; optimized the server for faster delivery.</p>
+          <div class="proj-highlight">+30% page‑load speed</div>
+        </div>
+        <div class="glass proj-card">
+          <div class="proj-top"><h3>SibilClean</h3><a class="proj-link" href="https://github.com/tashitushe/SibilClean" target="_blank" rel="noopener">GitHub</a></div>
+          <p>A lightweight native macOS app to find and remove leftover files from uninstalled or unwanted apps — caches, preferences, logs, and other data left behind in ~/Library.</p>
+          <div class="proj-highlight">Swift · macOS Liquid Glass UI</div>
+        </div>
+        <div class="glass proj-card">
+          <div class="proj-top"><h3>KMTMED</h3><a class="proj-link" href="https://kmtmed.com" target="_blank" rel="noopener">kmtmed.com</a></div>
+          <p>Initial design of the KMTMed Holding website, with ongoing code and content updates and new online forms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">04 · Skills</span>
+        <h2>Toolkit.</h2>
+      </div>
+      <div class="skill-groups">
+        <div class="glass skill-card">
+          <h3>IT &amp; Support</h3>
+          <div class="chip-set">
+            <span class="chip">Hardware troubleshooting</span>
+            <span class="chip">Software troubleshooting</span>
+            <span class="chip">Network troubleshooting</span>
+            <span class="chip">Technical support</span>
+            <span class="chip">IT security &amp; data protection</span>
+            <span class="chip">Active Directory</span>
+            <span class="chip">Firewalls</span>
+          </div>
+        </div>
+        <div class="glass skill-card">
+          <h3>Web Development</h3>
+          <div class="chip-set">
+            <span class="chip">HTML</span><span class="chip">CSS</span><span class="chip">JavaScript</span>
+            <span class="chip">PHP</span><span class="chip">MySQL</span><span class="chip">WordPress</span><span class="chip">Bootstrap</span>
+          </div>
+        </div>
+        <div class="glass skill-card">
+          <h3>Platforms</h3>
+          <div class="chip-set">
+            <span class="chip">Windows</span><span class="chip">macOS</span><span class="chip">Linux</span><span class="chip">Mobile devices</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="sec-tag">05 · Education &amp; Certifications</span>
+        <h2>Background.</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="glass edu-card">
+          <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.5 2.7 3 6 3s6-1.5 6-3v-5"/></svg></div>
+          <div>
+            <h3>BSc, Electrical Engineering</h3>
+            <div class="edu-meta">University of Azad, Tehran &middot; Nov 2011</div>
+          </div>
+        </div>
+        <div class="glass edu-card">
+          <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><path d="M8.5 12.5 7 21l5-2.5L17 21l-1.5-8.5"/></svg></div>
+          <div>
+            <h3>Certificate of Excellence</h3>
+            <div class="edu-meta">Nov 2012</div>
+            <p>For implementing and developing a university application‑registration system.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap">
+      <div class="glass contact-panel">
+        <span class="eyebrow">Let's talk</span>
+        <h2>Need a hand with IT support or a small web build?</h2>
+        <p>Based in Stockholm, working across Sweden and remotely. Reach out directly &mdash; I usually reply within a day.</p>
+        <div class="contact-links">
+          <a href="mailto:job@farnoud.net"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>job@farnoud.net</a>
+
+          <a href="https://linkedin.com/in/realfarnoud" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7 10v7M7 7v.01M12 17v-4.5a2.5 2.5 0 0 1 5 0V17M12 10v7"/></svg>LinkedIn</a>
+          <a href="https://linktr.ee/farnoud" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>linktree</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Farnoud Najari &middot; <span class="mono">Stockholm, Sweden</span></p>
+  </footer>
+</main>
+
+<script>
+  (function(){
+    var root=document.documentElement;
+    var btn=document.getElementById('themeToggle');
+    var stored=null;
+    try{ stored=localStorage.getItem('fn-theme'); }catch(e){}
+    if(stored==='light'||stored==='dark'){ root.setAttribute('data-theme',stored); }
+    btn.addEventListener('click',function(){
+      var mql=window.matchMedia('(prefers-color-scheme: dark)');
+      var current=root.getAttribute('data-theme');
+      var effectiveDark = current==='dark' || (!current && mql.matches);
+      var next = effectiveDark ? 'light' : 'dark';
+      root.setAttribute('data-theme',next);
+      try{ localStorage.setItem('fn-theme',next); }catch(e){}
+    });
+    document.getElementById('year').textContent=new Date().getFullYear();
+
+    var menuBtn=document.getElementById('menuToggle');
+    var mobileMenu=document.getElementById('mobileMenu');
+    function closeMenu(){
+      menuBtn.setAttribute('aria-expanded','false');
+      mobileMenu.classList.remove('open');
+    }
+    menuBtn.addEventListener('click',function(){
+      var isOpen=menuBtn.getAttribute('aria-expanded')==='true';
+      menuBtn.setAttribute('aria-expanded',String(!isOpen));
+      mobileMenu.classList.toggle('open',!isOpen);
+    });
+    mobileMenu.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click',closeMenu);
+    });
+    document.addEventListener('keydown',function(e){
+      if(e.key==='Escape') closeMenu();
+    });
+  })();
+</script>
+
+</body>
+</html>
